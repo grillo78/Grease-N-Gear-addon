@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[34,)"
+license="All rights reserved"
+
+[[mods]]
+modId="greasengears"
+version="${file.jarVersion}"
+displayName="Grease N' Gears"
+authors="grillo78, FatherKhimsky"
+description="Addon for MrCrayfish's vehicle mod"
+
+[[dependencies.greasengears]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36.2.13,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.greasengears]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
