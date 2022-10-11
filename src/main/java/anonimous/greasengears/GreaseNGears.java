@@ -1,10 +1,5 @@
-package ga.beycraft.greasengears;
+package anonimous.greasengears;
 
-import com.mrcrayfish.vehicle.entity.VehicleProperties;
-import ga.beycraft.greasengears.client.ClientUtils;
-import ga.beycraft.greasengears.client.SpecialModels;
-import ga.beycraft.greasengears.client.renderers.HelicopterRenderer;
-import ga.beycraft.greasengears.common.entities.ModEntities;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -27,7 +22,6 @@ public class GreaseNGears
 
     public GreaseNGears() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        ModEntities.REGISTER.register(eventBus);
         eventBus.addListener(this::onCommonSetup);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () ->{
             eventBus.addListener(this::onClientSetup);
@@ -38,10 +32,6 @@ public class GreaseNGears
     @OnlyIn(Dist.CLIENT)
     public  void register(ModelRegistryEvent event)
     {
-        for(SpecialModels model : SpecialModels.values())
-        {
-            model.registerModel();
-        }
     }
 
     private void onCommonSetup(FMLCommonSetupEvent event) {
@@ -49,6 +39,5 @@ public class GreaseNGears
 
     @OnlyIn(Dist.CLIENT)
     private void onClientSetup(FMLClientSetupEvent event){
-        ClientUtils.registerVehicleRenderer(ModEntities.HELICOPTER.get(), HelicopterRenderer::new);
     }
 }
