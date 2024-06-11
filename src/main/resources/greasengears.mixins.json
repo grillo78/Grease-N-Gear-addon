@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "anonimousmc.greasengears.mixin",
+  "refmap": "beycraft.refmap.json",
+  "mixins":[
+  ],
+  "client": [
+    "client.BlockPartDeserializerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
