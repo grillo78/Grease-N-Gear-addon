@@ -138,6 +138,7 @@ dependencies {
     implementation fg.deobf("curse.maven:mrcrayfishs-vehicle-mod-286660:3103940")
     implementation fg.deobf('curse.maven:obfuscate-289380:3336021')
     implementation fg.deobf('curse.maven:configured-457570:3537611')
+    implementation fg.deobf("curse.maven:controllable-317269:3937166")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
